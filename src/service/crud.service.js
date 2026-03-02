@@ -4,7 +4,7 @@ export const authorService = {
 
     getAll: async () => {
         try {
-            const res = await pool.query("SELECT * FROM author ORDER BY name ASC");
+            const res = await pool.query("SELECT * FROM practice.author ORDER BY name ASC");
             return res.rows;
         } catch (error) {
             console.error("Error to get all authors");
@@ -24,10 +24,10 @@ export const authorService = {
 
     },
 
-    create: async (name, nacionality) => {
+    create: async (name, nacionalty) => {
         try {
-            const query = "INSERT INTO author (name, nacionality) VALUES ($1, $2) RETURNING *"
-            const res = await pool.query(query, [name, nacionality]);
+            const query = "INSERT INTO practice.author (name, nacionalty) VALUES ($1, $2) RETURNING *"
+            const res = await pool.query(query, [name, nacionalty]);
             return res.rows[0];
         } catch (error) {
             console.log("Error to create the author")
@@ -37,7 +37,7 @@ export const authorService = {
 
     delete: async (name) => {
         try {
-            const res = await pool.query("DELETE FROM author where name = $1 RETURNING *", [name]);
+            const res = await pool.query("DELETE FROM practice.author where name = $1 RETURNING *", [name]);
             return res.rows[0];
         } catch (error) {
             console.log("Error to delete the author")
@@ -47,7 +47,7 @@ export const authorService = {
 
     deleteById: async (id) => {
         try {
-            const res = await pool.query("DELETE FROM author where id = $1 RETURNING *", [id]);
+            const res = await pool.query("DELETE FROM practice.author where id = $1 RETURNING *", [id]);
             return res.rows[0];
         } catch (error) {
             console.log("Error to delete the author")
@@ -55,10 +55,10 @@ export const authorService = {
         }
     },
 
-    update: async (id, name, nacionality) => {
+    update: async (id, name, nacionalty) => {
         try {
-            const query ="UPDATE author SET name = $1, nacionality = $2 WHERE id = $3 RETURNING *";
-            const res = await pool.query(query, [name, nacionality, id]);
+            const query ="UPDATE practice.author SET name = $1, nacionalty = $2 WHERE id = $3 RETURNING *";
+            const res = await pool.query(query, [name, nacionalty, id]);
             return res.rows[0];
         } catch (error) {
             console.log("Error to update the author")

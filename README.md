@@ -88,3 +88,12 @@ execute function validate_date();
 1. npm install.
 2. Complete the .env file for connect with database.
 3. Put in the console npm for execute the project
+
+# Postman:
+
+| Method | Endpoint              | Description              |
+|:------:|:---------------------:|:------------------------:|
+| GET    | /api/authors          | List all authors         |
+| POST   | /api/authors          | Create a new author      |
+| PUT    | /api/authors/:id      | Update by UUID           |
+| DELETE | /api/authors/:name    | Delete by name           |

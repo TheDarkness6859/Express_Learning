@@ -3,10 +3,11 @@ import { authorController } from "../controllers/crud.controller.js";
 
 export const authorsRoutes = Router();
 
-router.get("/", authorController.getAuthors);
+authorsRoutes.get("/", authorController.getAuthors);
 
-router.post("/", authorController.postAuthors);
+authorsRoutes.post("/", authorController.postAuthor);
 
-router.delete("/:name", authorController.deleteAuthors);
+authorsRoutes.delete("/:name", authorController.deleteAuthors);
 
-router.put("/:id", authorController.updateAuthor);
+authorsRoutes.put("/:id", authorController.updateAuthor);
+

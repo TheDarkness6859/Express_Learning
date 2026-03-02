@@ -1,0 +1,103 @@
+{
+  "info": {
+    "_postman_id": "ce76c121-85cb-48a7-8c88-f65a4146f88a",
+    "name": "Learning_Express API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52836035",
+    "_collection_link": "https://go.postman.co/collection/52836035-ce76c121-85cb-48a7-8c88-f65a4146f88a?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "get_all_authors",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URL}}/authors",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "authors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "post_new_author",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Esteban Bustamante\",\n  \"nacionalty\": \"Germany\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/authors",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "authors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "delete_author",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Esteban Bustamante\",\n  \"nacionalty\": \"Germany\"\n}"
+        },
+        "url": {
+          "raw": "{{URL}}/authors/Esteban Bustamante",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "authors",
+            "Esteban Bustamante"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "put_author",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Esteban Bustamante\",\n  \"nacionalty\": \"Germany\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URL}}/authors/e1d4d37b-4d68-4f9f-9996-dbcff7b8aad3",
+          "host": [
+            "{{URL}}"
+          ],
+          "path": [
+            "authors",
+            "e1d4d37b-4d68-4f9f-9996-dbcff7b8aad3"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
