@@ -25,6 +25,23 @@
       "response": []
     },
     {
+      "name": "get_all_authors_mongo",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{URLM}}/mongo",
+          "host": [
+            "{{URLM}}"
+          ],
+          "path": [
+            "mongo"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "post_new_author",
       "request": {
         "method": "POST",
@@ -45,6 +62,32 @@
           ],
           "path": [
             "authors"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "post_new_author_mongo",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Esteban Bustamante\",\n  \"nacionalty\": \"Germany\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URLM}}/mongo",
+          "host": [
+            "{{URLM}}"
+          ],
+          "path": [
+            "mongo"
           ]
         }
       },
@@ -73,6 +116,28 @@
       "response": []
     },
     {
+      "name": "delete_author_mongo",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Esteban Bustamante\",\n  \"nacionalty\": \"Germany\"\n}"
+        },
+        "url": {
+          "raw": "{{URLM}}/mongo/",
+          "host": [
+            "{{URLM}}"
+          ],
+          "path": [
+            "mongo",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
       "name": "put_author",
       "request": {
         "method": "PUT",
@@ -94,6 +159,33 @@
           "path": [
             "authors",
             "e1d4d37b-4d68-4f9f-9996-dbcff7b8aad3"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "put_author_mongo",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Estiven Andres\",\n  \"nacionalty\": \"North Korea\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{URLM}}/mongo/",
+          "host": [
+            "{{URLM}}"
+          ],
+          "path": [
+            "mongo",
+            ""
           ]
         }
       },

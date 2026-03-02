@@ -10,4 +10,3 @@ authorsRoutes.post("/", authorController.postAuthor);
 authorsRoutes.delete("/:name", authorController.deleteAuthors);
 
 authorsRoutes.put("/:id", authorController.updateAuthor);
-

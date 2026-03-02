@@ -18,7 +18,7 @@ Run the following command in your terminal: **npm start**.
 
 5. Test the endpoints.
 
-## Endpoint(authors):
+## Endpoint Postgres(authors):
 
 | Method | Endpoint              | Description              |
 |:------:|:---------------------:|:------------------------:|
@@ -27,9 +27,24 @@ Run the following command in your terminal: **npm start**.
 | PUT    | /api/authors/:id      | Update by UUID           |
 | DELETE | /api/authors/:name    | Delete by name           |
 
+## Endpoints MongoDB(authors):
+
+| Method | Endpoint                 | Description                     |
+|:------:|:------------------------:|:-------------------------------:|
+| GET    | /api/authors/mongo       | List all authors from MongoDB  |
+| POST   | /api/authors/mongo       | Create a new author in MongoDB |
+| PUT    | /api/authors/mongo/:id   | Update author by ObjectId      |
+| DELETE | /api/authors/mongo/:id   | Delete author by ObjectId      |
+
 # Database setup:
-To create the tables and triggers, execute the script found in:
+
+## Posgres:
+
+To create the **tables** and **triggers**, execute the script found in:
 database/setup.sql
+
+## MongoDB:
+The collection **authors** will be created automatically on the first **POST** request. Ensure your local MongoDB service is active.
 
 # Development notes:
 
